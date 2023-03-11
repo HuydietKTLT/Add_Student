@@ -35,9 +35,7 @@ void addStudent(string schoolYear,student &st){
 		cout<<"Gender: ";cin>>st.gender;
 		cout<<"Student class: "; cin>>st.clas;	
 		cout<<"Date of birth year of birth: "<<endl;
-		cout<<"Day: "; cin>>st.birth.day;
-		cout<<"Month: "; cin>>st.birth.month;
-		cout<<"Year: "; cin>>st.birth.year;
+		cout<<"Date: "; cin>>st.date;
 		string sd=st.clas;
 		sd=sd+".txt";
 		folder=folder+"/"+sd;
@@ -46,7 +44,7 @@ void addStudent(string schoolYear,student &st){
 		if(!stu.fail())	{
 			fstream add;
 			add.open(folder,ios::app);
-			add<<"\n"<<row(folder)+1<<" "<<st.ID<<" "<<st.Fname<<" "<<st.Lname<<" "<<" "<<st.gender<<" "<<st.birth.day<<"/"<<st.birth.month<<"/"<<st.birth.year;
+			add<<"\n"<<row(folder)+1<<" "<<st.ID<<" "<<st.Fname<<" "<<st.Lname<<" "<<" "<<st.gender<<" "<<st.date;
 			cout<<"Add student succesfull!";
 		}	
 		else {
