@@ -3,11 +3,6 @@
 #include <string>
 #include <sys/stat.h>
 using namespace std;
-struct date{
-	int day;
-	int month;
-	int year;
-};
 struct course{
 	string namecouse;
 	double* score[11];
@@ -19,7 +14,7 @@ struct student{
 	int ID;
 	string Fname;
 	string Lname;
-	date birth;
+	string date;
 	string gender;
 	string clas;
 	course c;
